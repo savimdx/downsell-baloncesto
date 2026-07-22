@@ -333,27 +333,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
         </div>
 
-        {/* ================= 6. GARANTÍA ================= */}
-        <div className="bg-gradient-to-br from-blue-950/50 via-slate-900/80 to-slate-950 border border-amber-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 max-w-3xl mx-auto shadow-2xl relative overflow-hidden">
-          <div className="h-20 w-20 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 shrink-0 shadow-inner">
-            <Shield className="h-10 w-10 stroke-[1.75]" />
-          </div>
-          <div className="space-y-2 text-center sm:text-left">
-            <div className="flex items-center justify-center sm:justify-start gap-2">
-              <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
-                🛡️ GARANTÍA DE SATISFACCIÓN
-              </span>
-            </div>
-            <h3 className="text-xl font-black text-white uppercase">
-              7 DÍAS DE GARANTÍA
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Prueba el contenido y descubre cómo puede ayudarte en la preparación física de tus jugadores. Si no estás satisfecho, podrás solicitar tu garantía dentro del plazo establecido.
-            </p>
-          </div>
-        </div>
-
-        {/* ================= 7. OFERTA FINAL / CHECKOUT ================= */}
+        {/* ================= 6. OFERTA FINAL / CHECKOUT ================= */}
         <div id="oferta-final" className="bg-gradient-to-b from-slate-900 via-blue-950/80 to-slate-950 border-2 border-amber-400 rounded-3xl p-6 sm:p-10 text-center relative overflow-hidden shadow-[0_20px_60px_rgba(37,99,235,0.25)] space-y-6 max-w-3xl mx-auto">
           
           <div className="space-y-3">
@@ -399,6 +379,26 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </div>
           </div>
 
+        </div>
+
+        {/* ================= 7. GARANTÍA ================= */}
+        <div className="bg-gradient-to-br from-blue-950/50 via-slate-900/80 to-slate-950 border border-amber-500/30 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 max-w-3xl mx-auto shadow-2xl relative overflow-hidden">
+          <div className="h-20 w-20 rounded-full bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 shrink-0 shadow-inner">
+            <Shield className="h-10 w-10 stroke-[1.75]" />
+          </div>
+          <div className="space-y-2 text-center sm:text-left">
+            <div className="flex items-center justify-center sm:justify-start gap-2">
+              <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">
+                🛡️ GARANTÍA DE SATISFACCIÓN
+              </span>
+            </div>
+            <h3 className="text-xl font-black text-white uppercase">
+              7 DÍAS DE GARANTÍA
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Prueba el contenido y descubre cómo puede ayudarte en la preparación física de tus jugadores. Si no estás satisfecho, podrás solicitar tu garantía dentro del plazo establecido.
+            </p>
+          </div>
         </div>
 
       </div>
