@@ -181,22 +181,22 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
             
             {/* Product Mockup Column */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-3">
-              <div className="relative group w-full max-w-full rounded-2xl bg-slate-950 p-2 border border-blue-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-all duration-300 hover:border-amber-400/50">
+            <div className="lg:col-span-7 flex flex-col items-center justify-center space-y-3">
+              <div className="relative group w-full max-w-xl sm:max-w-2xl lg:max-w-full rounded-2xl sm:rounded-3xl bg-slate-950 p-2.5 sm:p-3 border border-blue-500/40 shadow-[0_25px_60px_rgba(0,0,0,0.9)] transition-all duration-300 hover:border-amber-400/60">
                 <img 
                   src="https://i.postimg.cc/5yhDtSc7/Chat-GPT-Image-19-de-jul-de-2026-01-43-27.png" 
                   alt="Preparación Física Completa para el Baloncesto" 
-                  className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="w-full h-auto rounded-xl sm:rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <span className="text-[11px] text-slate-400 font-mono text-center">
+              <span className="text-xs sm:text-sm text-slate-300 font-mono text-center font-medium">
                 📘 Manual Digital de Acceso Inmediato
               </span>
             </div>
 
             {/* Benefits Bullet List Column */}
-            <div className="lg:col-span-7 space-y-4">
+            <div className="lg:col-span-5 space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {[
                   "Ejercicios de preparación física",
@@ -294,18 +294,18 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             {/* Visual Action Image */}
-            <div className="lg:col-span-6 relative overflow-hidden rounded-2xl border border-blue-500/20 shadow-2xl group">
+            <div className="lg:col-span-7 relative overflow-hidden rounded-2xl sm:rounded-3xl border border-blue-500/30 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
               <img 
                 src={trainingActionImg} 
                 alt="Entrenador y jugadores de baloncesto realizando ejercicios de preparación física" 
-                className="w-full h-auto object-cover rounded-2xl group-hover:scale-[1.03] transition-transform duration-500"
+                className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 max-h-[500px]"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             </div>
 
             {/* Interactive Pillar Highlights */}
-            <div className="lg:col-span-6 space-y-3">
+            <div className="lg:col-span-5 space-y-3">
               {transformationPillars.map((pillar, idx) => (
                 <div 
                   key={idx}
