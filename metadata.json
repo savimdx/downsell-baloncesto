@@ -1,0 +1,8 @@
+{
+  "name": "Preparación Física Completa para el Baloncesto",
+  "description": "Página de Upsell optimizada de alta conversión para entrenadores y preparadores físicos de baloncesto.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
