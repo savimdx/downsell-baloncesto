@@ -20,7 +20,7 @@ export default function App() {
 
   // Shared countdown ticking sync
   useEffect(() => {
-    document.title = "Preparación Física Completa para el Baloncesto";
+    document.title = "+1000 Sesiones de Entrenamiento de Baloncesto";
     const timer = setInterval(() => {
       setTimeLeftSticky((prev) => {
         if (prev <= 1) {

@@ -22,9 +22,44 @@ interface UpsellRFEFProps {
   onDecline: () => void;
 }
 
+declare global {
+  interface Window {
+    checkoutElements?: any;
+  }
+}
+
 export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
   const [secondsLeft, setSecondsLeft] = useState(1800); // 30:00 countdown timer
   const [activeTab, setActiveTab] = useState(0);
+
+  // Hotmart Sales Funnel Widget script loader
+  useEffect(() => {
+    const scriptId = 'hotmart-checkout-elements-script';
+    let script = document.getElementById(scriptId) as HTMLScriptElement | null;
+
+    const initHotmartWidget = () => {
+      if (window.checkoutElements) {
+        try {
+          window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+        } catch (e) {
+          console.error('Error mounting Hotmart sales funnel:', e);
+        }
+      }
+    };
+
+    if (!script) {
+      script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
+      script.async = true;
+      script.onload = () => {
+        initHotmartWidget();
+      };
+      document.body.appendChild(script);
+    } else {
+      initHotmartWidget();
+    }
+  }, []);
 
   // Countdown Timer Logic
   useEffect(() => {
@@ -154,9 +189,6 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
                   className="w-full h-auto rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute top-4 right-4 bg-amber-400 text-slate-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-md shadow-md">
-                  ACCESO DIGITAL
-                </div>
               </div>
               <span className="text-[11px] text-slate-400 font-mono text-center">
                 📘 Manual Digital de Acceso Inmediato
@@ -270,11 +302,6 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4 bg-slate-950/80 backdrop-blur-sm border border-white/10 p-3 rounded-xl">
-                <p className="text-xs font-bold text-amber-300">
-                  🏀 Ejercicios prácticos listos para aplicar en tus sesiones de entrenamiento
-                </p>
-              </div>
             </div>
 
             {/* Interactive Pillar Highlights */}
@@ -331,7 +358,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
           
           <div className="space-y-3">
             <span className="inline-flex items-center gap-1.5 bg-amber-400 text-slate-950 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest animate-pulse mx-auto">
-              ⚡ OFERTA EXCLUSIVA DE UPSELL
+              ⚡ OFERTA EXCLUSIVA
             </span>
             <h2 className="text-2xl sm:text-4xl font-black text-white uppercase leading-tight">
               MEJORA LA PREPARACIÓN FÍSICA DE TU EQUIPO HOY
@@ -359,31 +386,16 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </p>
           </div>
 
-          {/* Main CTA Button */}
-          <div className="space-y-4 max-w-md mx-auto">
-            <button
-              onClick={onAccept}
-              className="w-full py-4 sm:py-5 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 via-emerald-600 to-emerald-500 hover:brightness-110 text-white font-black text-base sm:text-lg uppercase tracking-wider transition-all duration-200 transform hover:scale-[1.02] shadow-[0_10px_30px_rgba(16,185,129,0.4)] flex items-center justify-center gap-3 cursor-pointer border border-emerald-400/40"
-            >
-              <Sparkles className="h-5 w-5 text-amber-300 animate-pulse" />
-              <span>SÍ, QUIERO ACCEDER AHORA</span>
-            </button>
+          {/* HOTMART - Sales Funnel Widget */}
+          <div id="hotmart-sales-funnel" className="my-4 min-h-[50px] flex flex-col justify-center items-center w-full text-center [&>iframe]:mx-auto [&>div]:mx-auto"></div>
 
-            {/* Micro indicators below CTA */}
+          {/* Main CTA Block */}
+          <div className="space-y-4 max-w-md mx-auto">
+            {/* Micro indicators */}
             <div className="flex justify-center items-center gap-4 text-[11px] font-mono font-bold text-slate-300 uppercase tracking-wider pt-2">
               <span className="flex items-center gap-1">🔒 Pago seguro</span>
               <span className="flex items-center gap-1">⚡ Acceso inmediato</span>
               <span className="flex items-center gap-1">🛡️ Garantía de 7 días</span>
-            </div>
-
-            {/* Subtle Decline link */}
-            <div className="pt-4 border-t border-slate-800">
-              <button
-                onClick={onDecline}
-                className="text-xs text-slate-500 hover:text-slate-400 underline font-medium cursor-pointer transition-colors"
-              >
-                No gracias, prefiero dejar pasar esta oferta de $5.90 USD
-              </button>
             </div>
           </div>
 
