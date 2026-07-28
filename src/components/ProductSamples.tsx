@@ -62,6 +62,8 @@ export default function ProductSamples() {
                       alt={sample.alt} 
                       className="w-full h-auto object-contain block"
                       referrerPolicy="no-referrer"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute top-2.5 right-2 text-[10px] sm:text-xs font-black bg-slate-950/80 text-white px-2 py-0.5 rounded-full flex items-center space-x-1 backdrop-blur-xs">
                       <Sparkles className="h-3 w-3 text-amber-400" />

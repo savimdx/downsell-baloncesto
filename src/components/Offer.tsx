@@ -77,6 +77,8 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                     alt="Producto principal + 5 bonificaciones tácticas"
                     className="rounded-2xl max-w-full h-auto border border-slate-100 shadow-md max-h-[300px] object-contain"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

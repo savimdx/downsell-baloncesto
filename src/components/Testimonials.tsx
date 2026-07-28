@@ -64,6 +64,8 @@ export default function Testimonials() {
                           alt={t.name} 
                           className="h-full w-full object-cover"
                           referrerPolicy="no-referrer"
+                          loading="lazy"
+                          decoding="async"
                         />
                       ) : (
                         t.avatar

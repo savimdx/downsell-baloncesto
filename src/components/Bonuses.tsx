@@ -46,6 +46,8 @@ export default function Bonuses() {
                     alt={bonus.title} 
                     className="max-w-full h-auto max-h-[300px] sm:max-h-[350px] mx-auto block object-contain hover:scale-[1.03] transition-transform duration-300"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

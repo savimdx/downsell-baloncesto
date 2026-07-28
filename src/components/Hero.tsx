@@ -32,6 +32,9 @@ export default function Hero() {
                 alt="Chat-GPT-Image-17-de-jun-de-2026-10-01-30" 
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
  

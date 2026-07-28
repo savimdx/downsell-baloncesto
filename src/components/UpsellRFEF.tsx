@@ -188,6 +188,9 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
                   alt="Preparación Física Completa para el Baloncesto" 
                   className="w-full h-auto rounded-xl sm:rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </div>
               <span className="text-xs sm:text-sm text-slate-300 font-mono text-center font-medium">
@@ -300,6 +303,8 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
                 alt="Entrenador y jugadores de baloncesto realizando ejercicios de preparación física" 
                 className="w-full h-auto object-cover rounded-2xl sm:rounded-3xl group-hover:scale-[1.03] transition-transform duration-500 max-h-[500px]"
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             </div>
