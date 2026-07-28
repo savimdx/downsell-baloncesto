@@ -115,14 +115,14 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
       <div className="absolute top-[40%] right-10 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[150px] pointer-events-none"></div>
 
       {/* ================= 1. BARRA SUPERIOR DE URGENCIA ================= */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-600 via-red-500 to-amber-600 text-white py-2.5 px-4 shadow-[0_4px_25px_rgba(239,68,68,0.3)] flex items-center justify-center gap-2 sm:gap-4 border-b border-white/10">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-red-600 text-white py-2.5 px-4 shadow-[0_4px_25px_rgba(239,68,68,0.3)] flex items-center justify-center gap-2 sm:gap-4 border-b border-white/10">
         <span className="text-base sm:text-lg animate-pulse">🔥</span>
         <span className="text-xs sm:text-sm font-extrabold tracking-wide uppercase font-sans">
           ¡OFERTA ESPECIAL DISPONIBLE AHORA!
         </span>
-        <div className="flex items-center gap-1.5 bg-black/25 border border-white/20 rounded-xl px-2.5 py-1 text-xs sm:text-sm font-black text-amber-300 font-mono shadow-inner">
-          <Clock className="h-3.5 w-3.5 text-amber-400 shrink-0" />
-          <span>{formatTimer(secondsLeft)}</span>
+        <div className="flex items-center gap-1.5 bg-black/25 border border-white/20 rounded-xl px-2.5 py-1 text-xs sm:text-sm font-black text-white font-mono shadow-inner">
+          <Clock className="h-3.5 w-3.5 text-white shrink-0" />
+          <span className="text-white">{formatTimer(secondsLeft)}</span>
         </div>
       </div>
 
@@ -372,7 +372,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
           </div>
 
           {/* HOTMART - Sales Funnel Widget */}
-          <div id="hotmart-sales-funnel" className="my-4 min-h-[50px] flex flex-col justify-center items-center w-full text-center [&>iframe]:mx-auto [&>div]:mx-auto"></div>
+          <div id="hotmart-sales-funnel" className="my-4 min-h-[50px]"></div>
 
           {/* Main CTA Block */}
           <div className="space-y-4 max-w-md mx-auto">
