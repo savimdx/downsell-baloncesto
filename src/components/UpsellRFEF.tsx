@@ -358,12 +358,9 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             <span className="text-xs text-slate-400 uppercase font-mono tracking-widest block">
               PRECIO ESPECIAL POR TIEMPO LIMITADO
             </span>
-            <div className="flex items-baseline justify-center gap-2">
-              <span className="text-5xl sm:text-7xl font-black text-amber-400 font-mono tracking-tight drop-shadow-md">
-                $5.90
-              </span>
-              <span className="text-xl font-bold text-amber-400 font-mono">
-                USD
+            <div className="flex items-baseline justify-center">
+              <span className="text-6xl sm:text-8xl font-[950] font-sans text-amber-400 tracking-tight drop-shadow-lg">
+                7,28€
               </span>
             </div>
             <p className="text-[11px] text-slate-400 font-medium">
