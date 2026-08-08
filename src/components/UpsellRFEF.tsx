@@ -360,9 +360,12 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </span>
             <div className="flex items-baseline justify-center">
               <span className="text-6xl sm:text-8xl font-[950] font-sans text-amber-400 tracking-tight drop-shadow-lg">
-                7,28€
+                US$ 5,90
               </span>
             </div>
+            <p className="text-xs font-semibold text-amber-300/90 tracking-wide">
+              (Puedes pagar en tu moneda local)
+            </p>
             <p className="text-[11px] text-slate-400 font-medium">
               (Pago único • Sin suscripciones • Acceso de por vida)
             </p>

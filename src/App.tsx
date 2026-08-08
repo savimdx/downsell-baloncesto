@@ -103,7 +103,7 @@ export default function App() {
                         <Sparkles className="h-4 w-4 text-amber-400 flex-shrink-0 animate-pulse" />
                         <span className="font-bold">Preparación Física Completa para el Baloncesto</span>
                       </div>
-                      <span className="font-black font-mono text-amber-300">7,28 €</span>
+                      <span className="font-black font-mono text-amber-300">US$ 5,90</span>
                     </li>
                   ) : (
                     <li className="flex justify-between items-center text-slate-500 italic p-1 border-t border-slate-850/60 pt-2.5">
